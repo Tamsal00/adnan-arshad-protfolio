@@ -18,7 +18,7 @@ export function Hero() {
             Let&apos;s Talk
             <ArrowUpRight size={18} aria-hidden="true" />
           </a>
-          <a className="secondary-button" href="/cv.pdf" download>
+          <a className="secondary-button" href="/api/cv">
             Download CV
             <Download size={18} aria-hidden="true" />
           </a>

@@ -27,6 +27,7 @@ export function Starfield() {
     let animationFrame = 0;
     let stars: Star[] = [];
     const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+    const SPEED_MULTIPLIER = 2.25;
 
     const reset = () => {
       const width = window.innerWidth;
@@ -52,7 +53,7 @@ export function Starfield() {
       context.fillStyle = "#ffffff";
 
       stars.forEach((star) => {
-        star.y += star.speed;
+        star.y += star.speed * SPEED_MULTIPLIER;
         if (star.y > window.innerHeight + 8) {
           star.y = -8;
           star.x = Math.random() * window.innerWidth;
